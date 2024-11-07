@@ -15,8 +15,8 @@ query = {
     "query": {
         "range": {
             "@timestamp": {
-                "gte": "now-7d/d",
-                "lt": "now/d"
+                "gte": "now-7d",
+                "lt": "now"
             }
         }
     }
@@ -86,7 +86,7 @@ else:
     date_range = "unknown_date_range"
 
 # Create the filename dynamically based on the date range
-filename = f"kibana_logs_{date_range}.csv"
+filename = f"nginx_logs_{date_range}.csv"
 
 # Open CSV file for writing
 with open(filename, "w", newline="") as f:
